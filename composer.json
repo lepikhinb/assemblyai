@@ -1,0 +1,59 @@
+{
+    "name": "based/assemblyai",
+    "description": "AssemblyAI API PHP Client",
+    "keywords": [
+        "laravel",
+        "assemblyai",
+        "api"
+    ],
+    "homepage": "https://github.com/lepikhinb/assemblyai",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Boris Lepikhin",
+            "email": "boris@lepikhin.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "illuminate/http": "^8.54",
+        "illuminate/validation": "^8.54",
+        "spatie/laravel-package-tools": "^1.4.3"
+    },
+    "require-dev": {
+        "nunomaduro/larastan": "^0.6.10",
+        "orchestra/testbench": "^6.20",
+        "pestphp/pest": "^1.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Based\\AssemblyAI\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Based\\AssemblyAI\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "stan": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Based\\AssemblyAI\\AssemblyAIServiceProvider"
+            ],
+            "aliases": {
+                "AssemblyAI": "Based\\AssemblyAI\\Facade\\AssemblyAI"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
